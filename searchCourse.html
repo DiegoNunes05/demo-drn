@@ -290,6 +290,7 @@
 
         $.each(discs_list, function (index, value) {
           disc_item +=
+<<<<<<< HEAD
           '<div class="col-4 disc-item' +
             (index > 5 ? " hidden" : "") +
             '">' +
@@ -302,6 +303,21 @@
             discs_list[index]["Course"] +
             "</div>" +
             "</div>" +    
+=======
+            '<div class="col-4 disc-item pb-4' +
+            (index > 5 ? " hidden" : "") +
+            '">' +
+            '<div class="course-box">' +
+            '<div class="header-box">' +
+            '<div class="header-img">' +  
+            '<img src="./assets/pin2.png" alt="icon">' +
+            '</div>' +
+            '<span>' +
+            discs_list[index]["Course"] +
+            '</span>' +
+            '</div>'
+            +
+>>>>>>> dae4e06afbaeb673115b6be3c61d77a470965699
             '<div class="course-box-detail">' +
             '<div class="course-image">' +
             '<img src="./assets/course-image.png" alt="image">' +
@@ -313,6 +329,12 @@
             " " +
             discs_list[index]["Disc"] +
             "</span></li>" +
+<<<<<<< HEAD
+=======
+            '<li style="border-top: 1px solid var(--primary-grey);"><img src="./assets/course-icon.png" alt="icon"><span>' +
+            discs_list[index]["Brand"] +
+            "</span></li>" +
+>>>>>>> dae4e06afbaeb673115b6be3c61d77a470965699
             '<li><img src="./assets/user.png" alt="icon"><span>' +
             discs_list[index]["Name"] +
             "</span></li>" +
@@ -321,7 +343,13 @@
             "</span></li>" +            
             "</ul>" +
             '<div class="course-button">' +
+<<<<<<< HEAD
             `<a href="#" class="btn-2" onclick="claimDisc('${discs_list[index]["ID"]}')">Claim Disc</a>` +
+=======
+            `<a href="#" class="course-btn" onclick="claimDisc('${discs_list[index]["ID"]}')">Claim Disc</a>` +
+            "</div>" +
+            "</div>" +
+>>>>>>> dae4e06afbaeb673115b6be3c61d77a470965699
             "</div>" +
             "</div>" +
             "</div>" +
@@ -348,6 +376,85 @@
         }
       }
     </script>
+    <style>
+       .header-box{
+        /* width: 100%; */
+        display: flex;
+        /* justify-content: center; */
+        /* align-self: center; */
+        align-items: center;
+        margin-right: 30px;
+        max-width: 190px;
+        position: absolute;
+        transform: translate(-20px, -20px);  
+      }
+      .header-img {
+        position: relative;
+        width: 50px; 
+        height: 45px; 
+        border-radius: 50%;
+        background-color:  rgb(196, 11, 51);     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-img img{
+        width: 28px;
+            height: auto;  
+            position: relative;
+      }
+      .header-box span {
+        background-color: rgb(196, 11, 51);
+        width: 120px;
+        height: 20px;
+        color: rgb(231, 230, 230);
+        display: flex;
+        justify-content: start; 
+        align-items: center;
+        font-size: 11px;
+        padding-left: 8px;
+        margin-left: -5px;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        letter-spacing: 0.5px;
+        font-family: 'Lato', sans-serif;
+      }
+
+      @media screen and (max-width: 500px) {
+       
+        .header-box {
+          margin-left: 8px;
+        }
+
+        .header-box span {
+          width: 70px;
+          padding-left: 4px;
+          font-size: 9.5px;
+        }
+        
+        .header-img {
+        position: relative;
+        width: 30px; 
+        height: 30px; 
+        border-radius: 50%;
+        background-color:  rgb(196, 11, 51);     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-img img{
+        width: 18px;
+            height: auto;  
+            position: relative;        
+      }
+
+      .course-list .course-button .course-btn {
+        margin-left: 19px;
+      }
+    
+    }
+    </style>
   </head>
 
   <body style="overflow: hidden">

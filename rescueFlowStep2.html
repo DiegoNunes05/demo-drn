@@ -118,7 +118,7 @@
         const phoneInputValue = document.getElementById("inputPhone").value;
 
         // Check if a disc is found (you can modify this condition)
-        var disc_found = false; // Change this condition as needed
+        var disc_found = true; // Change this condition as needed
 
         if (phoneInputValue == "999-123-4567") {
           disc_found = true;
@@ -139,6 +139,7 @@
           const discInfoHTML = `
                     <div class="disc-item">
                         <div class="course-box">
+<<<<<<< HEAD
                             <div class="course-box-detail">
                               <div class="div-block-2">
                                   <div class="circle-overlay">
@@ -146,6 +147,15 @@
                                   </div>
                                     <div class="text-block-2">${matchingDisc.Course}</div>
                                 </div>
+=======
+                            <div class="course-box-detail mt-2 pl-0">
+                              <div class="div-block-2 flowStep2">
+                                 <div class="circle-overlay">    
+                                    <img src="./assets/pin2.png" style="color: var(--primary-white);" alt="icon">
+                                 </div>
+                                <div class="text-block-2">${matchingDisc.Course}</div>
+                              </div>
+>>>>>>> dae4e06afbaeb673115b6be3c61d77a470965699
                                 <div class="course-image">
                                     <img src="./assets/course-image.png" alt="image">
                                 </div>
@@ -156,12 +166,21 @@
                                             <span>${matchingDisc.Color} ${matchingDisc.Disc}</span>
                                         </li>
                                         <li>
+<<<<<<< HEAD
                                             <img src="./assets/user.png" alt="icon">
                                             <span>${matchingDisc.Name}</span>
                                         </li>
                                         <li>
                                             <img src="./assets/course-icon.png" alt="icon">
                                             <span>${matchingDisc.Brand}</span>
+=======
+                                            <img src="./assets/course-icon.png" alt="icon">
+                                            <span>${matchingDisc.Brand}</span>
+                                        </li>
+                                        <li>
+                                            <img src="./assets/user.png" alt="icon">
+                                            <span>${matchingDisc.Name}</span>
+>>>>>>> dae4e06afbaeb673115b6be3c61d77a470965699
                                         </li>
                                     </ul>
                                 </div>
@@ -235,7 +254,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-      }
+      }      
     </style>
   </head>
 
@@ -431,7 +450,7 @@
         <!-- <span class="close" id="close" onclick="closePopupVerify()"
           >&times;</span
         > -->
-        <div class="verify-info">
+        <div class="verify-info flex-column ml-0">
           <div
             class="verify-row m-0"
             id="discInfoVerify"

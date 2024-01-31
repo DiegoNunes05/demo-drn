@@ -205,6 +205,7 @@
             const discInfoHTML = matchingDiscs
               .map(
                 (matchingDisc) => `
+<<<<<<< HEAD
                 <div class="col-6 disc-item" style="padding-right: 3.5px; padding-left: 3.5px;">
                 <div class="course-box">
                     <div class="course-box-detail">
@@ -215,15 +216,32 @@
                                     <div class="text-block-2">${matchingDisc.Course}</div>
                                 </div>
                         <div class="course-image">
+=======
+            <div class="col-4 disc-item mt-4 pb-4" style="padding-right: 3.5px; padding-left: 3.5px; margin-bottom: 1rem">
+                <div class="course-box">
+                    <div class="course-box-detail">
+                      <div class="div-block-2">
+                            <div class="circle-overlay">    
+                              <img src="./assets/pin2.png" style="color: var(--primary-white);" alt="icon">
+                            </div>
+                          <div class="text-block-2">${matchingDisc.Course}</div>
+                        </div>
+                        <div class="course-image" >
+>>>>>>> dae4e06afbaeb673115b6be3c61d77a470965699
                             <img src="./assets/course-image.png" alt="image">
                         </div>
                         <div class="course-list">
                             <ul>
+<<<<<<< HEAD
                                 <li>
+=======
+                                <li style= height: 24px !important; max-height: 24px !important">
+>>>>>>> dae4e06afbaeb673115b6be3c61d77a470965699
                                     <img src="./assets/tag.png" alt="icon">
                                     <span>${matchingDisc.Color} ${matchingDisc.Disc}</span>
                                 </li>
                                 <li>
+<<<<<<< HEAD
                                     <img src="./assets/user.png" alt="icon">
                                     <span>${matchingDisc.Name}</span>                                    
                                 </li>
@@ -236,6 +254,23 @@
                         </div>                        
                     </div>                    
                     </div>
+=======
+                                    <img src="./assets/course-icon.png" alt="icon">
+                                    <span>${matchingDisc.Brand}</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/user.png" alt="icon">
+                                    <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">${matchingDisc.Name}</span>
+                                </li>
+                            </ul>
+                            <div class="course-bottom" style="margin-top: 10px">                     
+                                  <div class="course-button">
+                                    <a href="#" class="course-btn" onclick="claimDisc(${matchingDisc.ID})">Claim Disc</a>
+                                  </div>
+                          </div>
+                        </div>                        
+                    </div>                    
+>>>>>>> dae4e06afbaeb673115b6be3c61d77a470965699
                 </div>
             </div>
         `
